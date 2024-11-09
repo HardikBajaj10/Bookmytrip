@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+    <title>Book My Trip</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .menu{
+    background-image: url('header.jpg.jpg');
+    }
+      .main-content {
+        text-align: center;
+        margin: 20px;
+      }
+      .login-form {
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        background-color: #fff; 
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .login-form input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+      }
+      .login-form .submit-button {
+        background-color: #000; 
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+      }
+      .quick-access {
+        text-align: center;
+        margin: 30px;
+      }
+      .quick-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px; 
+      }
+      .quick-links a {
+        display: block;
+        text-align: center;
+        width: 150px; 
+        height: 150px; 
+        padding: 10px;
+        background-color: #fff; 
+        border: 1px solid #ccc; 
+        color: black; 
+        transition: 0.3s;
+        position: relative;
+        border-radius: 10px; 
+      }
+      .quick-links a:hover {
+        background-color: #000; 
+        color: red;
+        z-index: 10; 
+        transform: scale(1.1);
+      }
+      .quick-links a img {
+        width: 130px; 
+        height: 110px; 
+        display: block;
+        margin: 0 auto 10px;
+        transition: transform 0.3s;
+      }
+      .quick-links a:hover img {
+        transform: scale(1.2); 
+      }
+      .rate-experience {
+        text-align: center;
+        margin: 20px;
+      }
+      .rate-experience form {
+        margin-bottom: 10px;
+      }
+      .submit-button {
+        background-color: #000; 
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+      .submit-button:hover {
+        background-color: #333; 
+      }
+      #response-message {
+        color: #000; 
+        font-weight: bold;
+      }      
+      body {
+        background-color: #f4f4f4;
+      }
+      </style>
+</head>
+<body>
+    <header class="menu">
+        <nav class="navbar">
+            <div class="logo"><img src="bookmytripp.jpg" alt="Book My Trip Logo" class="center-image" style="height:100px;"></div>
+            <input type="text" placeholder="Search" style="background-color:black; color: red;height:50px;width:70%;border-radius:20px;padding-left:20px;font-size:15px;margin-left:20px;margin-top:18px;">
+            <ul class="nav-links">
+                <li><a href="project.html">Home</a></li>
+                <li><a href="homestays.html">Homestays</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="menu-content">
+            <h1 style="text-align:center;font-size:64px;">Welcome to Book My Trip!</h1>
+        </div>
+    </header>
+    <div class="main-content">
+        <iframe src="https://www.youtube.com/embed/Aca5DoIKMcM" width="70%" height="350px"></iframe>
+    <div class="quick-access">
+        <h2>Quick Access</h2>
+        <div class="quick-links">
+            <a href="https://sites.google.com/view/bookmytripp/home?authuser=0/"id="home"><img src="header.jpg.jpg" alt="HOME PAGE">HOME</a>
+            <a href="https://sites.google.com/view/bookmytripp/flights?authuser=0/" id="flights"><img src="plane.jpg.jpg" alt="FLIGHTS">FLIGHTS</a>
+            <a href="https://sites.google.com/view/bookmytripp/holiday-packages?authuser=0/"id="holiday"><img src="holiday packages.jfif" alt="HOLIDAY">HOLIDAY PACKAGES</a>
+            <a href="https://sites.google.com/view/bookmytripp/homestays?authuser=0/" id="homestays"><img src="homestay.jpg"alt="HOMESTAYS">HOMESTAYS</a>
+            <a href="https://sites.google.com/view/bookmytripp/hotels?authuser=0/" id="hotels"><img src="hotels.jfif" alt="HOTELS">HOTELS</a>
+            <a href="https://sites.google.com/view/bookmytripp/trains?authuser=0/" id="trains"><img src="trains.jfif" alt="TRAINS">TRAINS</a>
+            <a href="https://sites.google.com/view/bookmytripp/buses?authuser=0/ "id="buses"><img src="trains.jpg" alt="BUSES">BUSES</a>
+        </div>
+    </div>
+
+    <div class="rate-experience">
+        <h2>Rate Your Experience</h2>
+        <form action="handle_get.php" method="GET"></form>
+        <form>
+            <select name="rate" id="rate-select">
+                <option value="rating">Rate Your Experience</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="submit" value="Submit" onclick="submitRating()" class="submit-button">
+        </form>
+        <p id="response-message"></p>
+    </div>
+
+    <script src="newjava.js"></script>
+</body>
+
+</html>
